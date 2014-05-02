@@ -11,6 +11,7 @@ Simple wrapper for performing command line zip and unzip. Useful for extra large
 
 Coding Examples
 =============
+```javascript
     var sysZip = require('sysZip')();
 
     // create zip
@@ -30,3 +31,4 @@ Coding Examples
             console.log('zip created');
         }
     });
+```
