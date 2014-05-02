@@ -14,7 +14,7 @@ Coding Examples
     var sysZip = require('sysZip')();
 
     // create zip
-    sysUser.create('archive.zip',['file.jpg','path/dir/name'],function(err){
+    sysZip.create('archive.zip',['file.jpg','path/dir/name'],function(err){
     	if(err){
     		console.log('ERROR',err);
     	}else{
@@ -23,7 +23,7 @@ Coding Examples
     });
 
     // unzip
-    sysUser.extract('archive.zip','/path/to/extract/to',function(err){
+    sysZip.extract('archive.zip','/path/to/extract/to',function(err){
         if(err){
             console.log('ERROR',err);
         }else{
