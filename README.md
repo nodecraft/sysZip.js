@@ -15,7 +15,7 @@ Coding Examples
     var sysZip = require('sysZip')();
 
     // create zip
-    sysZip.create('archive.zip',['file.jpg','path/dir/name'],function(err){
+    sysZip.create('archive.zip',['file.jpg','path/dir/name'],'/path/to/cwd',function(err){
     	if(err){
     		console.log('ERROR',err);
     	}else{
