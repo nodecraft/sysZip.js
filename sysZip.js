@@ -18,12 +18,19 @@ module.exports = function(){
 	}
 
 	return {
-		create: function(filename,targets,callback){
+		create: function(filename,targets,cwd,callback){
+			var options = {};
+			if(callback==undefined && typeof cwd == 'function'){
+				callback = cwd;
+			}
+			if(typeof cwd == 'string' && cwd.length>0){
+				options = {cwd:cwd};
+			}
 			var target = buildTargets(targets);
 			if(target==false){
 				callback('Invalid target list provided');
 			}else{
-				exec('zip -r '+String(filename)+' '+target,function(error,stdout,stderr){
+				exec('zip -r '+String(filename)+' '+target,options,function(error,stdout,stderr){
 					if(error){
 						callback(stderr);
 					}else{

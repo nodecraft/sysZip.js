@@ -2,7 +2,7 @@
 	"name":"syszip",
 	"description": "Simple wrapper for performing command line zip and unzip. Useful for extra large zip archives you don't want loaded into node ram. Only tested on CentOS 6.",
 	"author": "NodeCraft Hosting LLC <admin@getnodecraft.net> (http://getnodecraft.net)",
-	"version":"1.0.0",
+	"version":"1.0.1",
 	"main": "sysZip.js",
 	"repository": {
 	  "type": "git",
